@@ -9,8 +9,8 @@ import React, { useState } from 'react';
 // Function to fetch IP details from the API route
 const fetchIpDetails = async (ip) => {
 
-  const accessKey = process.env.NEXT_PUBLIC_IPAPI_ACCESS_KEY;
-  const res = await fetch(`https://api.ipapi.com/api/${ip}?access_key=${accessKey}`);
+ 
+  const res = await fetch(`https://api.ipapi.com/api/${ip}?access_key=c74b643a5fd04cf79b4e4e595871484c`);
   const data = await res.json();
   console.log(data);
   
