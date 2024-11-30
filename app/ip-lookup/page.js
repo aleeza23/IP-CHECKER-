@@ -8,8 +8,12 @@ import React, { useState } from 'react';
 
 // Function to fetch IP details from the API route
 const fetchIpDetails = async (ip) => {
-  const res = await fetch(`/api/iplookup?ip=${ip}`);
+
+  const accessKey = process.env.NEXT_PUBLIC_IPAPI_ACCESS_KEY;
+  const res = await fetch(`https://api.ipapi.com/api/${ip}?access_key=${accessKey}`);
   const data = await res.json();
+  console.log(data);
+  
   return data;
 };
 
@@ -87,7 +91,7 @@ const IpLookup = () => {
           <div className="flex flex-wrap gap-4 mt-4 justify-center">
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">IP</h2>
-              <p className="text-gray-700">{ipDetails.query}</p>
+              <p className="text-gray-700">{ipDetails.ip}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">City</h2>
@@ -95,19 +99,19 @@ const IpLookup = () => {
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">Region</h2>
-              <p className="text-gray-700">{ipDetails.regionName}</p>
+              <p className="text-gray-700">{ipDetails.region_name}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">Country</h2>
-              <p className="text-gray-700">{ipDetails.country}</p>
+              <p className="text-gray-700">{ipDetails.country_name}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
-              <h2 className="text-lg font-semibold text-gray-800">Location</h2>
-              <p className="text-gray-700">{ipDetails.lat}, {ipDetails.lon}</p>
+              <h2 className="text-lg font-semibold text-gray-800">Continent</h2>
+              <p className="text-gray-700">{ipDetails.continent_name}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
-              <h2 className="text-lg font-semibold text-gray-800">Organization</h2>
-              <p className="text-gray-700">{ipDetails.org}</p>
+              <h2 className="text-lg font-semibold text-gray-800">Capital</h2>
+              <p className="text-gray-700">{ipDetails.location.capital}</p>
             </div>
           </div>
         )}

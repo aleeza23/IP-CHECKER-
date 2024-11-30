@@ -7,6 +7,7 @@ import Loader from './Loader';
 const IpDetails = () => {
   const { loading, error, data: ipData } = useIpDetails();
   const { browser, screenSize, cookiesEnabled } = useBrowserDetails();
+console.log('ipdata' , ipData);
 
   if (loading) {
     return <Loader />;

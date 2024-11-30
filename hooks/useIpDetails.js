@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { useEffect, useReducer } from 'react';
 
 const initialState = {
@@ -27,7 +28,8 @@ const useIpDetails = () => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_INIT' });
       try {
-        const response = await fetch('https://ip-api.com/json');
+        const accessKey = process.env.NEXT_PUBLIC_IPAPI_ACCESS_KEY;
+        const response = await fetch(`https://api.ipapi.com/api/161.185.160.93?access_key=${accessKey}`);
         const result = await response.json();
         if (response.ok) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result });
