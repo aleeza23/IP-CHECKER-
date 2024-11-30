@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 const fetchIpDetails = async (ip) => {
 
  
-  const res = await fetch(`ipinfo.io/${ip}?token=ff54dabd6117c7`);
+  const res = await fetch(`https://ipinfo.io/${ip}?token=ff54dabd6117c7`);
   const data = await res.json();
   // console.log(data);
   
