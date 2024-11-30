@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 const fetchIpDetails = async (ip) => {
 
  
-  const res = await fetch(`https://api.ipapi.com/api/${ip}?access_key=c74b643a5fd04cf79b4e4e595871484c`);
+  const res = await fetch(`ipinfo.io/${ip}?token=ff54dabd6117c7`);
   const data = await res.json();
   // console.log(data);
   
@@ -99,19 +99,19 @@ const IpLookup = () => {
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">Region</h2>
-              <p className="text-gray-700">{ipDetails.region_name}</p>
+              <p className="text-gray-700">{ipDetails.region}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h2 className="text-lg font-semibold text-gray-800">Country</h2>
-              <p className="text-gray-700">{ipDetails.country_name}</p>
+              <p className="text-gray-700">{ipDetails.country}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
-              <h2 className="text-lg font-semibold text-gray-800">Continent</h2>
-              <p className="text-gray-700">{ipDetails.continent_name}</p>
+              <h2 className="text-lg font-semibold text-gray-800">Postal</h2>
+              <p className="text-gray-700">{ipDetails.postal}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-lg">
-              <h2 className="text-lg font-semibold text-gray-800">Capital</h2>
-              <p className="text-gray-700">{ipDetails.location.capital}</p>
+              <h2 className="text-lg font-semibold text-gray-800">Timezone</h2>
+              <p className="text-gray-700">{ipDetails.timezone}</p>
             </div>
           </div>
         )}
