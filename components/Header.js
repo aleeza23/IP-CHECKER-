@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 // import logo from '../public/readymadeui.svg'; 
 
@@ -13,12 +12,12 @@ const Header = () => {
   return (
     <header className="flex shadow-lg py-4 px-4 sm:px-10 bg-white font-sans min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between gap-4 w-full">
-        <a
-          href="javascript:void(0)"
+        <Link
+          href="/"
           className="lg:absolute max-lg:left-10 lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2"
         >
           <h1>IP CHECKER</h1>
-        </a>
+        </Link>
 
         <div
           className={`${
@@ -48,9 +47,9 @@ const Header = () => {
             className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50"
           >
             <li className="mb-6 hidden max-lg:block">
-              <a href="/">
+              <Link href="/">
               IP Checker
-              </a>
+              </Link>
             </li>
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <Link
@@ -73,9 +72,9 @@ const Header = () => {
 
         <div className="flex items-center ml-auto space-x-6">
           <button className="font-semibold border-none outline-none">
-            <a href="/ip-lookup" className="inline-block  text-center font-medium text-gray-100 bg-green-600 border-solid border-2 border-white py-2 px-8 hover:bg-green-800 hover:shadow-md ">
+            <Link href="/ip-lookup" className="inline-block  text-center font-medium text-gray-100 bg-green-600 border-solid border-2 border-white py-2 px-8 hover:bg-green-800 hover:shadow-md ">
               Ckeck IP
-            </a>
+            </Link>
           </button>
         
 
