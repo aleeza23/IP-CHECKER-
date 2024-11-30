@@ -12,7 +12,7 @@ const fetchIpDetails = async (ip) => {
  
   const res = await fetch(`https://api.ipapi.com/api/${ip}?access_key=c74b643a5fd04cf79b4e4e595871484c`);
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   
   return data;
 };

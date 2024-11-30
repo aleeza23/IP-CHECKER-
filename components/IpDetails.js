@@ -1,14 +1,13 @@
-'use client'; // Add this directive to enable client-side rendering
+'use client'; 
 
 import useIpDetails from '../hooks/useIpDetails';
 import useBrowserDetails from '../hooks/useBrowserDetails';
 import Loader from './Loader';
-import Image from 'next/image';
 
 const IpDetails = () => {
   const { loading, error, data: ipData } = useIpDetails();
   const { browser, screenSize, cookiesEnabled } = useBrowserDetails();
-  console.log('ipdata', ipData);
+  // console.log('ipdata', ipData);
 
   if (loading) {
     return <Loader />;
@@ -35,31 +34,31 @@ const IpDetails = () => {
             {/* IP Row */}
             <tr className="border-t-2 border-b-2 border-green-600">
               <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">IP</th>
-              <td className="p-4 text-lg text-left">{ipData.ip}</td>
+              <td className="p-4 text-lg text-left break-all">{ipData.ip}</td>
             </tr>
 
             {/* City Row */}
             <tr className="border-t-2 border-b-2 border-green-600">
               <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">City</th>
-              <td className="p-4 text-lg text-left">{ipData.city}</td>
+              <td className="p-4 text-lg text-left">{ipData.city || 'N/A'}</td>
             </tr>
 
             {/* Capital Row */}
             <tr className="border-t-2 border-b-2 border-green-600">
               <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Capital</th>
-              <td className="p-4 text-lg text-left">{ipData.location.capital}</td>
+              <td className="p-4 text-lg text-left">{ipData?.region}</td>
             </tr>
 
             {/* Country Row */}
             <tr className="border-t-2 border-b-2 border-green-600">
               <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Country</th>
-              <td className="p-4 text-lg text-left">{ipData.country_name}</td>
+              <td className="p-4 text-lg text-left">{ipData.country}</td>
             </tr>
 
             {/* Location Row */}
             <tr className="border-t-2 border-b-2 border-green-600">
-              <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Location</th>
-              <td className="p-4 text-lg text-left">{`${ipData.latitude}, ${ipData.longitude}`}</td>
+              <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Postal</th>
+              <td className="p-4 text-lg text-left">{`${ipData.postal}`}</td>
             </tr>
 
             {/* Browser Row */}
@@ -81,25 +80,11 @@ const IpDetails = () => {
             </tr>
 
             {/* Continent Row */}
-            <tr className="border-t-2 border-b-2 border-green-600">
-              <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Continent</th>
-              <td className="p-4 text-lg text-left">{ipData.continent_name}</td>
+            <tr className="border-t-2 border-b-2 ">
+              <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Timezone</th>
+              <td className="p-4 text-lg text-left">{ipData.timezone}</td>
             </tr>
 
-            {/* Flag Row */}
-            <tr className="border-t-2 h-[350px] border-b-2 border-green-600">
-              <th className="p-4 text-center font-bold text-white bg-green-600 uppercase border-r-2 border-white border-b-2">Flag</th>
-              <td className="p-4 relative">
-                <Image
-                  src={ipData.location.country_flag}
-                  fill
-                  alt="flag"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
