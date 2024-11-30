@@ -5,14 +5,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
+    <footer className="flex flex-col items-center bg-zinc-50 text-center text-surface -700 ">
       <div className="container pt-9">
         {/* Social media icons container */}
         <div className="mb-6 flex justify-center space-x-2">
           <a
             href="#!"
             type="button"
-            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:bg-secondary-900"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 "
           >
             <span className="[&>svg]:h-5 [&>svg]:w-5">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
@@ -26,7 +26,7 @@ const Footer = () => {
           <a
             href="#!"
             type="button"
-            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:bg-secondary-900"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 :text-white"
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
@@ -40,7 +40,7 @@ const Footer = () => {
           <a
             href="#!"
             type="button"
-            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:bg-secondary-900"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 "
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 488 512">
@@ -54,7 +54,7 @@ const Footer = () => {
           <a
             href="#!"
             type="button"
-            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:bg-secondary-900"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out bg-neutral-100 focus:outline-none focus:ring-0 "
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
