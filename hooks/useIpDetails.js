@@ -29,7 +29,7 @@ const useIpDetails = () => {
       dispatch({ type: 'FETCH_INIT' });
       try {
         const accessKey = process.env.NEXT_PUBLIC_IPAPI_ACCESS_KEY;
-        const response = await fetch(`https://api.ipapi.com/api/161.185.160.93?access_key=${accessKey}`);
+        const response = await fetch(`https://api.ipapi.com/api/161.185.160.93?access_key=c74b643a5fd04cf79b4e4e595871484c`);
         const result = await response.json();
         if (response.ok) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result });
