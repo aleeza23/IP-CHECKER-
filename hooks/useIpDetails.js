@@ -27,7 +27,7 @@ const useIpDetails = () => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_INIT' });
       try {
-        const response = await fetch('http://ip-api.com/json');
+        const response = await fetch('https://ip-api.com/json');
         const result = await response.json();
         if (response.ok) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result });
