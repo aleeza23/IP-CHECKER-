@@ -1,10 +1,10 @@
 import React from 'react';
-import img from '@/public/hero02.jpg'
-import domain from '@/public/37576.jpg'
-import DNSChecker from '@/public/ip-checker.PNG'
-import wordpress from '@/public/wordpress.jpg'
-import shopify from '@/public/shopify.jpg'
-import hosting from '@/public/hosting.jpg'
+import img from '@/public/hero02.webp'
+import domain from '@/public/37576.webp'
+import DNSChecker from '@/public/ip-checker.webp'
+import wordpress from '@/public/wordpress.webp'
+import shopify from '@/public/shopify.webp'
+import hosting from '@/public/hosting.webp'
 
 
 import Image from 'next/image';

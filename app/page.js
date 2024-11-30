@@ -3,7 +3,7 @@ import IpDetails from "@/components/IpDetails";
 import ProtectIP from "@/components/ProtectIP";
 import Text from "@/components/Text";
 import Tools from "@/components/Tools";
-import hero from '@/public/hero02.jpg'
+import hero from '@/public/hero02.webp'
 import Image from "next/image";
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
             Your IP Lookup Tool
             </h2>
             <p className="mt-4">
-              Use this tool to find detailed information about your IP address, including location, browser, screen size, and other technical details. This can help you identify your device's geographical and network-related data.
+              Use this tool to find detailed information about your IP address, including location, browser, screen size, and other technical details. This can help you identify your devices geographical and network-related data.
             </p>
             {/* Button Container */}
             <div className="mt-8">

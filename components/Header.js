@@ -23,7 +23,7 @@ const Header = () => {
         <div
           className={`${
             menuOpen ? 'max-lg:block' : 'max-lg:hidden'
-          } lg:block lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50`}
+          } lg:block  max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50`}
         >
           <button
             id="toggleClose"
