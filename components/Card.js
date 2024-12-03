@@ -8,7 +8,7 @@ const Card = ({ heading, imageUrl, bg, textBg, textColor,  text }) => (
         </div>
         <div className="w-full md:w-auto flex justify-center items-center relative h-[150px]">
             <div className="w-[300px] h-[120px] relative">
-                <Image src={imageUrl} alt={heading} layout="fill" className="rounded-lg object-contain" />
+                <Image src={imageUrl} alt={heading} fill className="rounded-lg object-contain" />
             </div>
         </div>
     </div>

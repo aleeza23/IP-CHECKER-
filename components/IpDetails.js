@@ -1,4 +1,4 @@
-'use client'; // Add this directive to enable client-side rendering
+'use client';
 
 import useIpDetails from '../hooks/useIpDetails';
 import useBrowserDetails from '../hooks/useBrowserDetails';
@@ -18,8 +18,8 @@ const IpDetails = () => {
     return <p className="text-red-500">Error: {error}</p>;
   }
   // Extract latitude and longitude from the 'loc' field
-  const loc = ipData?.loc; // The loc field is in the format "latitude,longitude"
-  const [lat, lon] = loc ? loc.split(',') : []; // Split loc into lat and lon
+  const loc = ipData?.loc;
+  const [lat, lon] = loc ? loc.split(',') : [];
 
   // Google Maps iframe URL based on lat, lon
   const mapUrl = lat && lon
@@ -131,7 +131,7 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 4th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 5th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
@@ -155,78 +155,77 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 4th item */}
-  <div className="flex items-start">
-    <div className="shrink-0">
-      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
-        {/* SVG for Screen */}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-          stroke="currentColor" className="h-6 w-6">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M3 4.5h18a1.5 1.5 0 011.5 1.5v12a1.5 1.5 0 01-1.5 1.5H3a1.5 1.5 0 01-1.5-1.5v-12a1.5 1.5 0 011.5-1.5zm0 2a.5.5 0 00-.5.5v11a.5.5 0 00.5.5h18a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5H3zm2 1h14v9H5V7.5z" />
-        </svg>
-      </div>
-    </div>
-    <div className="ml-6 grow">
-      <p className="mb-2 font-bold">
-        Screen
-      </p>
-      <p className="text-sm text-neutral-500">
-        {screenSize} 
-      </p>
-    </div>
-  </div>
-</div>
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 6th item */}
+              <div className="flex items-start">
+                <div className="shrink-0">
+                  <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                    {/* SVG for Screen */}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                      stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M3 4.5h18a1.5 1.5 0 011.5 1.5v12a1.5 1.5 0 01-1.5 1.5H3a1.5 1.5 0 01-1.5-1.5v-12a1.5 1.5 0 011.5-1.5zm0 2a.5.5 0 00-.5.5v11a.5.5 0 00.5.5h18a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5H3zm2 1h14v9H5V7.5z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-6 grow">
+                  <p className="mb-2 font-bold">
+                    Screen
+                  </p>
+                  <p className="text-sm text-neutral-500">
+                    {screenSize}
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
 
-<div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 4th item */}
-  <div className="flex items-start">
-    <div className="shrink-0">
-      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
-        {/* SVG for Cookies */}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-          stroke="currentColor" className="h-6 w-6">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M12 2.25c5.25 0 9.75 4.5 9.75 9.75S17.25 21.75 12 21.75 2.25 17.25 2.25 12 6.75 2.25 12 2.25zm0 2c-1.125 0-2.25.75-2.25 2.25s1.125 2.25 2.25 2.25 2.25-.75 2.25-2.25-1.125-2.25-2.25-2.25zm0 10.5c-2.25 0-4.5-1.125-4.5-3.375S9.75 8.25 12 8.25s4.5 1.125 4.5 3.375-2.25 3.375-4.5 3.375zm0 2.25c2.625 0 5.25 1.5 5.25 3.75v.375H6.75v-.375c0-2.25 2.625-3.75 5.25-3.75z" />
-        </svg>
-      </div>
-    </div>
-    <div className="ml-6 grow">
-      <p className="mb-2 font-bold">
-        Cookies
-      </p>
-      <p className="text-sm text-neutral-500">
-        {cookiesEnabled.toString()}
-      </p>
-    </div>
-  </div>
-</div>
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 7th item */}
+              <div className="flex items-start">
+                <div className="shrink-0">
+                  <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                    {/* SVG for Cookies */}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                      stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M12 2.25c5.25 0 9.75 4.5 9.75 9.75S17.25 21.75 12 21.75 2.25 17.25 2.25 12 6.75 2.25 12 2.25zm0 2c-1.125 0-2.25.75-2.25 2.25s1.125 2.25 2.25 2.25 2.25-.75 2.25-2.25-1.125-2.25-2.25-2.25zm0 10.5c-2.25 0-4.5-1.125-4.5-3.375S9.75 8.25 12 8.25s4.5 1.125 4.5 3.375-2.25 3.375-4.5 3.375zm0 2.25c2.625 0 5.25 1.5 5.25 3.75v.375H6.75v-.375c0-2.25 2.625-3.75 5.25-3.75z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-6 grow">
+                  <p className="mb-2 font-bold">
+                    Cookies
+                  </p>
+                  <p className="text-sm text-neutral-500">
+                    {cookiesEnabled.toString()}
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
-<div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 4th item */}
-  <div className="flex items-start">
-    <div className="shrink-0">
-      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
-        {/* SVG for Timezone (Globe with timezones) */}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-          stroke="currentColor" className="h-6 w-6">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M12 2.25c5.25 0 9.75 4.5 9.75 9.75S17.25 21.75 12 21.75 2.25 17.25 2.25 12 6.75 2.25 12 2.25zM12 0c-6.75 0-12 5.25-12 12s5.25 12 12 12 12-5.25 12-12-5.25-12-12-12zm0 17.25c-2.25 0-4.5 1.125-4.5 3.375v.375h9v-.375c0-2.25-2.25-3.375-4.5-3.375zm0-10.5c-1.5 0-3.375 1.5-3.375 3.375s1.875 3.375 3.375 3.375 3.375-1.5 3.375-3.375-1.875-3.375-3.375-3.375z" />
-        </svg>
-      </div>
-    </div>
-    <div className="ml-6 grow">
-      <p className="mb-2 font-bold">
-        Timezone
-      </p>
-      <p className="text-sm text-neutral-500">
-        {ipData.timezone}
-      </p>
-    </div>
-  </div>
-</div>
-
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 8th item */}
+              <div className="flex items-start">
+                <div className="shrink-0">
+                  <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                    {/* SVG for Timezone (Globe with timezones) */}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                      stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M12 2.25c5.25 0 9.75 4.5 9.75 9.75S17.25 21.75 12 21.75 2.25 17.25 2.25 12 6.75 2.25 12 2.25zM12 0c-6.75 0-12 5.25-12 12s5.25 12 12 12 12-5.25 12-12-5.25-12-12-12zm0 17.25c-2.25 0-4.5 1.125-4.5 3.375v.375h9v-.375c0-2.25-2.25-3.375-4.5-3.375zm0-10.5c-1.5 0-3.375 1.5-3.375 3.375s1.875 3.375 3.375 3.375 3.375-1.5 3.375-3.375-1.875-3.375-3.375-3.375z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-6 grow">
+                  <p className="mb-2 font-bold">
+                    Timezone
+                  </p>
+                  <p className="text-sm text-neutral-500">
+                    {ipData.timezone}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
