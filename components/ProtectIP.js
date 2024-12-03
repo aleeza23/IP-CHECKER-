@@ -1,76 +1,35 @@
 import React from 'react';
-
-const protectionTips = [
-  {
-    id: 1,
-    title: "Use a VPN",
-    description: "Use a VPN to mask your IP address and secure your online activity.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-10 w-10 text-white">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v9m0 0l-4-4m4 4l4-4m-4 4v9" />
-      </svg>
-    ),
-  },
-  {
-    id: 2,
-    title: "Enable a Firewall",
-    description: "Enable a firewall to block unauthorized access to your network.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-10 w-10 text-white">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 10V3h18v7m-18 7v4h18v-4" />
-      </svg>
-    ),
-  },
-  {
-    id: 3,
-    title: "Keep Your Browser Updated",
-    description: "Keep your browser updated to avoid vulnerabilities and protect against malicious sites.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-10 w-10 text-white">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 5l7 7-7 7M21 12H3" />
-      </svg>
-    ),
-  },
-  {
-    id: 4,
-    title: "Use Two-Factor Authentication",
-    description: "Use Two-Factor Authentication (2FA) for an extra layer of protection for your accounts.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-10 w-10 text-white">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v9m0 0l-4-4m4 4l4-4m-4 4v9" />
-      </svg>
-    ),
-  },
-];
+import Heading from './Heading';
+import Card from './Card';
+import image01 from '@/public/tokyo-magnifier-web-search-with-elements 2.png';
+import image02 from '@/public/tokyo-selecting-a-value-in-the-browser-window 1.png';
+import image03 from '@/public/Illustration (1).png';
+import image04 from '@/public/Illustration (2).png';
+import image05 from '@/public/Illustration.png';
+import image06 from '@/public/tokyo-sending-messages-from-one-place-to-another 1.png';
+import Text from './Text';
 
 const ProtectIP = () => {
   return (
-    <section className="py-12 bg-white mt-10">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-center text-green-600 mb-8">How to Protect Your IP Address</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {protectionTips.map((tip) => (
-            <div
-              key={tip.id}
-              className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg"
-            >
-              <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-green-600 transition-all duration-300 group-hover:scale-[10]"></span>
-              <div className="relative z-10 mx-auto max-w-md">
-                <span className="grid h-20 w-20 place-items-center rounded-full bg-green-600 transition-all duration-300 group-hover:bg-green-500">
-                  {tip.icon}
-                </span>
-                <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
-                  <p>{tip.description}</p>
-                </div>
-                <div className="pt-5 text-base font-semibold leading-7">
-                  <a href="#" className="text-green-600 transition-all duration-300 group-hover:text-white">
-                    Learn More &rarr;
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+    <section className="bg-white ">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12">
+        <div className="flex md:gap-10 flex-wrap md:flex-nowrap">
+          <Heading heading="How to Protect Your IP Address" text="Discover the best practices to secure your IP address and enhance your online privacy." />
         </div>
+
+        {/* cards */}
+        <div className="container mx-auto mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+            <Card heading="Use a VPN" imageUrl={image01} bg="bg-gray-100" textBg="bg-blue-400" textColor={'text-gray-500'} text="Use a VPN to mask your IP address and secure your online activity." />
+            <Card heading="Enable a Firewall" imageUrl={image02} bg="bg-blue-500" textBg="bg-white" textColor={'text-white'} text="Enable a firewall to block unauthorized access to your network." />
+            <Card heading="Keep Your Browser Updated" imageUrl={image05} bg="bg-[#000000]" textBg="bg-white" textColor={'text-white'} text="Keep your browser updated to avoid vulnerabilities." />
+            <Card heading="Use Two-Factor Authentication" imageUrl={image06} bg="bg-gray-100" textBg="bg-blue-400" text="Use Two-Factor Authentication (2FA) for an extra layer of protection." />
+            <Card heading="Regularly Change Passwords" imageUrl={image03} bg="bg-blue-500" textColor={'text-white'} textBg="bg-white" text="Regularly update your passwords to maintain security." />
+            <Card heading="Beware of Phishing Scams" imageUrl={image04} bg="bg-[#000000]" textColor={'text-white'} textBg="bg-blue-400" text="Stay vigilant against phishing attempts to protect your personal information." />
+          </div>
+        </div>
+
+        <Text />
       </div>
     </section>
   );

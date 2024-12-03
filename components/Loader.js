@@ -1,12 +1,12 @@
 const Loader = () => {
     return (
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center mb-10">
         <div className="flex space-x-2">
-          <div className="bg-green-500 h-10 w-1 animate-bounce delay-100"></div>
-          <div className="bg-gray-200 h-10 w-1 animate-bounce delay-200"></div>
-          <div className="bg-green-500 h-10 w-1 animate-bounce delay-300"></div>
-          <div className="bg-gray-200 h-10 w-1 animate-bounce delay-400"></div>
-          <div className="bg-gray-200 h-10 w-1 animate-bounce delay-500"></div>
+          <div className="bg-blue-500 h-10 w-1 animate-bounce delay-100"></div>
+          <div className="bg-purple-400 h-10 w-1 animate-bounce delay-200"></div>
+          <div className="bg-blue-500 h-10 w-1 animate-bounce delay-300"></div>
+          <div className="bg-purple-400 h-10 w-1 animate-bounce delay-400"></div>
+          <div className="bg-blue-500 h-10 w-1 animate-bounce delay-500"></div>
         </div>
         <style jsx>{`
           .animate-bounce {

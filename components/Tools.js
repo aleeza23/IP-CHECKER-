@@ -8,6 +8,7 @@ import hosting from '@/public/hosting.webp'
 
 
 import Image from 'next/image';
+import Heading from './Heading';
 const tools = [
   {
     title: 'IP Lookup',
@@ -43,25 +44,14 @@ const tools = [
 
 const Tools = () => {
   return (
-    <div className="container max-w-7xl mx-auto px-4 mt-12">
-      <h2 className="text-3xl font-extrabold text-center text-green-600 mb-8">More Tools</h2>
-      <div className="flex flex-wrap">
-        {tools.map((tool, index) => (
-          <div key={index} className="w-full md:w-6/12 lg:w-4/12 px-4 mb-8">
-            <div className=" relative w-full h-[250px] p-6">
-              <Image
-                alt={tool.title}
-                src={tool.imageUrl}
-                fill
-                className="rounded-2xl max-w-full h-auto align-middle border-none mb-4"
-              />             
-            </div>
-            <h3 className="text-xl text-center font-semibold mt-4">{tool.title}</h3>
-            <p className="text-gray-700 font-thin text-center">{tool.description}</p>
-          </div>
-        ))}
+    <section className="bg-white mt-20 ">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12">
+        <div className="flex md:gap-10 flex-wrap md:flex-nowrap">
+        <Heading heading="More Tools" text="Explore a variety of tools to enhance your online experience and ensure your digital security." />
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

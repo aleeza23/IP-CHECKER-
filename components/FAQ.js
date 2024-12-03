@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Heading from './Heading';
 
 const faqData = [
   {
@@ -35,43 +36,47 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState(1); // Open the first FAQ by default
 
   const toggleFAQ = (id) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
   return (
-    <div className="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
-      <div className="flex flex-col text-left basis-1/2">
-        <p className="inline-block font-semibold text-primary mb-4">Insurance FAQ</p>
-        <p className="sm:text-4xl text-3xl font-extrabold text-base-content">Frequently Asked Questions</p>
+    <section className="bg-white mt-20">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12">
+        <div className="flex md:gap-10 flex-wrap md:flex-nowrap">
+          <Heading heading="Frequently Asked Questions" text="Find answers to common questions about our services and tools, and learn how to make the most out of them." />
+        </div>
+        <div className="container mx-auto mt-10 ">
+          <ul className="basis-1/2">
+            {faqData.map((faq, index) => (
+              <li
+                key={faq.id}
+                className={`border border-black border-b-4 rounded-3xl mb-4 shadow-md px-10 py-3 ${expandedFAQ === faq.id ? "bg-blue-500 text-white" : "bg-gray-100"}`}
+              >
+                <button
+                  className="relative flex gap-3 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                  aria-expanded={expandedFAQ === faq.id ? "true" : "false"}
+                  onClick={() => toggleFAQ(faq.id)}
+                >
+                  <span className=" hidden md:block font-medium">{`0${index + 1}`}</span>
+                  <span className="flex-1 text-base-content">{faq.question}</span>
+                  <div className={`rounded-full border ${expandedFAQ === faq.id ? "border-white" : "border-black"} w-8 h-8 flex items-center justify-center`}>
+                    <span className="text-xl">{expandedFAQ === faq.id ? "-" : "+"}</span>
+                  </div>
+                </button>
+                <div
+                  className={`transition-all duration-300 ease-in-out ${expandedFAQ === faq.id ? "max-h-[1000px] pb-5" : "max-h-0"} overflow-hidden`}
+                >
+                  <div className="text-base text-white font-light leading-normal border-t border-white pt-8 ">{faq.answer}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <ul className="basis-1/2">
-        {faqData.map((faq) => (
-          <li key={faq.id}>
-            <button
-              className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
-              aria-expanded={expandedFAQ === faq.id ? "true" : "false"}
-              onClick={() => toggleFAQ(faq.id)}
-            >
-              <span className="flex-1 text-base-content">{faq.question}</span>
-              <svg className="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <rect y="7" width="16" height="2" rx="1" className={`transform origin-center transition duration-200 ease-out ${expandedFAQ === faq.id ? "rotate-90" : ""}`}></rect>
-                <rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${expandedFAQ === faq.id ? "rotate-0" : ""}`}></rect>
-              </svg>
-            </button>
-            <div
-              className={`transition-all duration-300 ease-in-out ${expandedFAQ === faq.id ? "max-h-[1000px]" : "max-h-0"} overflow-hidden`}
-            >
-              <div className="pb-5 leading-relaxed">
-                <div className="space-y-2 leading-relaxed">{faq.answer}</div>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    </section>
   );
 };
 
