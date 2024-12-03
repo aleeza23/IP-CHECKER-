@@ -131,7 +131,7 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 5th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 mb-6 md:mb-0 "> {/* 5th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
@@ -155,7 +155,7 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 6th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3  mb-6 md:mb-0"> {/* 6th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
@@ -180,7 +180,7 @@ const IpDetails = () => {
 
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 7th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 mb-6 md:mb-0 "> {/* 7th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
@@ -204,7 +204,7 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 "> {/* 8th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 mb-6 md:mb-0 "> {/* 8th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
