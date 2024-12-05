@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content={metadata.robots} />
         <link
           rel="canonical"
-          href="https://www.thestockit.net/tools/ipdetailer/"
+          href="https://www.thestockit.net/tools/ip-detailer/"
         />
       </head>
 
