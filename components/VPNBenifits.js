@@ -14,7 +14,7 @@ const benefits = [
 
 const VPNBenefits = () => {
   return (
-    <div className="px-4 md:px-12 container mx-auto mb-20">
+    <div className="max-w-screen-xl px-4 md:px-12 container mx-auto mb-20">
       <h5 className="mb-2 md:mb-8 text-2xl md:text-4xl font-bold leading-none md:pl-2">
         Benefits of changing your address{' '}
         <br className="hidden md:block" />
