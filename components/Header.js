@@ -2,7 +2,6 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import logo from '@/public/logo.2eb85d29b6c42e62c4ad.webp';
@@ -33,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative bg-v flex justify-between items-center px-6 bg-transparent z-20 w-full">
+      <header className="relative  flex justify-between items-center px-6 bg-transparent z-20 w-full">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="https://thestockit.net/">
@@ -54,23 +53,12 @@ const Header = () => {
             <ul className="flex space-x-5 text-lg">
               <li>
                 <Link href="/" className="hover:text-blue-500 ">
-                  Home
+                  IP Checker
                 </Link>
               </li>
               <li>
-                <Link href="/hosting" className="hover:text-blue-500 ">
-                  Web Hosting
-                </Link>
-              </li>
-              <li>
-                <Link href="/domain" className="hover:text-blue-500 ">
-                  Domains
-                </Link>
-              </li>
-
-              <li>
-                <Link href="/courses" className="hover:text-blue-500 ">
-                  Courses
+                <Link href="/ip-lookup" className="hover:text-blue-500 ">
+                  IP Lookup
                 </Link>
               </li>
               {/* <li>
@@ -78,11 +66,6 @@ const Header = () => {
                   Services
                 </Link>
               </li> */}
-              <li>
-                <Link href="/portfolio" className="hover:text-blue-500 ">
-                  Projects
-                </Link>
-              </li>
 
               {/* <li>
                 <Link href="#blogs" className="hover:text-blue-500 ">
@@ -96,26 +79,25 @@ const Header = () => {
 
         {/* Let's Connect Button for Desktop */}
         <div className="hidden lg:block">
-          <Link href="#contact" className="px-6 py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white rounded-full hover:shadow-lg transition">
-            Lets Connect
+          <Link href="/ip-lookup" className="px-6 py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white rounded-full hover:shadow-lg transition">
+            Check my IP
           </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}
         <div className="lg:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
-            <motion.div
-              animate={isOpen ? { rotate: 45 } : { rotate: 0 }}
+            <div
+              
               className="w-6 h-0.5 bg-gray-800 mb-1"
-            ></motion.div>
-            <motion.div
-              animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+            ></div>
+            <div
+             
               className="w-6 h-0.5 bg-gray-800 mb-1"
-            ></motion.div>
-            <motion.div
-              animate={isOpen ? { rotate: -45 } : { rotate: 0 }}
+            ></div>
+            <div              
               className="w-6 h-0.5 bg-gray-800"
-            ></motion.div>
+            ></div>
           </button>
         </div>
 

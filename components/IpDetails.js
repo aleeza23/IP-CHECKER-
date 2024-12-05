@@ -204,7 +204,7 @@ const IpDetails = () => {
             </div>
 
 
-            <div className="w-full sm:w-6/12 lg:w-3/12 px-3 mb-6 md:mb-0 "> {/* 8th item */}
+            <div className="w-full sm:w-6/12 lg:w-3/12 px-3  "> {/* 8th item */}
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-blue-500 p-4 text-white">

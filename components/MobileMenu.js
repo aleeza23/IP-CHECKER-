@@ -21,7 +21,7 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLinkClick }) => (
         <ul className="flex flex-col items-center space-y-6 ">
             <li>
                 <Link href="/" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
-                    Home
+                    IP Checker
                 </Link>
             </li>
             {/* <li>
@@ -33,8 +33,8 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLinkClick }) => (
                 </button>
             </li> */}
             <li>
-                <Link href="/portfolio" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
-                    Projects
+                <Link href="/ip-lookup" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
+                    IP Lookup
                 </Link>
             </li>
 
@@ -47,28 +47,13 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLinkClick }) => (
                 </button>
             </li> */}
 
-       
-            <li>
-                <Link href="/hosting" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
-                    Web Hosting
-                </Link>
-            </li>
-            <li>
-                <Link href="/domain" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
-                    Domains
-                </Link>
-            </li>
-            <li>
-                <Link href="/courses" className="text-lg font-medium text-gray-800 hover:text-blue-500 transition">
-                    Courses
-                </Link>
-            </li>
+
             <li>
                 <button
-                    onClick={() => handleLinkClick('contact')}
+                    onClick={() => handleLinkClick('/ip-lookup')}
                     className="px-6 py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white rounded-full hover:shadow-lg transition"
                 >
-                    Lets Connect
+                   Check My IP
                 </button>
             </li>
         </ul>

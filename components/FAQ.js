@@ -43,7 +43,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-white mt-20">
+    <section className="bg-white">
       <div className="max-w-screen-xl mx-auto px-6 md:px-12">
         <div className="flex md:gap-10 flex-wrap md:flex-nowrap">
           <Heading heading="Frequently Asked Questions" text="Find answers to common questions about our services and tools, and learn how to make the most out of them." />
